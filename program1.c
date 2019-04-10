@@ -102,9 +102,8 @@ int main()
  
     //average turnaround time
     printf("\nAverage Turnaround Time=%f\n",(float)totalTAT/n);//average turnaround time
-	printf("Average Waiting Time=%f\n\n",(float)totalWT/n);//average waiting time
-    
-    
+    printf("Average Waiting Time=%f\n\n",(float)totalWT/n);//average waiting time
+    printf("Average Turnaround time if CPU is left for 1 time unit : %f\n",totalTAT2/n); 
 	
 	return 0;
 }
