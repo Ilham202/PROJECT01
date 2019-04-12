@@ -59,8 +59,8 @@ void *cat_eats(void *arg)
 	sem_wait(&lock_c);
 	NumLoops-=1;
 	if(NumLoops==0)
-	sem_post(&lock_c);
 	sem_post(&lock_m);
+	sem_post(&lock_c);
 }
 
 void *mice_eats(void *arg)
@@ -68,7 +68,6 @@ void *mice_eats(void *arg)
 	int y;
 	y=((int)arg);
 	sem_wait(&lock_m);
-	NumBowl++;
 	printf("Mice%d eats from bowl%d\n",y,NumBowl);
 	sleep(2);
 	//signal mice
